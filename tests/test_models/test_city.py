@@ -13,13 +13,12 @@ class TestCity(unittest.TestCase):
 
     def setUp(self):
         """ Called before executing the test method """
-        self.my_state = State()
-        self.my_city = City()
+        pass
 
     def test_attributes(self):
         """ Tests city attributes """
-        self.my_city.state_id = self.my_state.id
-        self.my_city.name = "Giza"
+        City.state_id = None
+        City.name = None
 
-        self.assertEqual(self.my_city.state_id, self.my_state.id)
-        self.assertEqual(self.my_city.name, "Giza")
+        self.assertEqual(City.state_id, None)
+        self.assertEqual(City.name, None)

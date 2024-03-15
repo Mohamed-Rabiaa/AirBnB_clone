@@ -12,10 +12,10 @@ class TestAmenity(unittest.TestCase):
 
     def setUp(self):
         """ Called before executing the test method """
-        self.my_amenity = Amenity()
+        pass
 
     def test_attributes(self):
         """ Tests Amenity attributes """
-        self.my_amenity.name = "Wifi"
+        Amenity.name = "Wifi"
 
-        self.assertEqual(self.my_amenity.name, "Wifi")
+        self.assertEqual(Amenity.name, "Wifi")

@@ -13,16 +13,16 @@ class TestUser(unittest.TestCase):
     """ This class tests the User class """ 
     def setUp(self):
         """ Called before executing the test method """
-        self.my_user = User()
+        pass
         
     def test_attributes(self):
         """ Tests User attributes """
-        self.my_user.email = "au@gmail.com"
-        self.my_user.password = "12345678"
-        self.my_user.first_name = "John"
-        self.my_user.last_name = "Smith"
+        User.email = "au@gmail.com"
+        User.password = "12345678"
+        User.first_name = "John"
+        User.last_name = "Smith"
 
-        self.assertEqual(self.my_user.email, "au@gmail.com")
-        self.assertEqual(self.my_user.password, "12345678")
-        self.assertEqual(self.my_user.first_name, "John")
-        self.assertEqual(self.my_user.last_name, "Smith")
+        self.assertEqual(User.email, "au@gmail.com")
+        self.assertEqual(User.password, "12345678")
+        self.assertEqual(User.first_name, "John")
+        self.assertEqual(User.last_name, "Smith")

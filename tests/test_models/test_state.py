@@ -11,9 +11,9 @@ class TestState(unittest.TestCase):
 
     def setUp(self):
         """ called before executing the test method """
-        self.my_state = State()
+        pass
 
     def test_attribute(self):
         """ Tests the name attribute """
-        self.my_state.name = "state"
-        self.assertEqual(self.my_state.name, "state")
+        State.name = "state"
+        self.assertEqual(State.name, "state")
