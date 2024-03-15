@@ -15,5 +15,4 @@ class TestState(unittest.TestCase):
 
     def test_attribute(self):
         """ Tests the name attribute """
-        State.name = "state"
-        self.assertEqual(State.name, "state")
+        self.assertEqual(State.name, "")

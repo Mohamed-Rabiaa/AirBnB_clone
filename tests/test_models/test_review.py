@@ -18,9 +18,6 @@ class TestReview(unittest.TestCase):
 
     def test_attributes(self):
         """ Tests Review attributes """
-        Review.place_id = ""
-        Review.user_id = ""
-        Review.text = ""
 
         self.assertEqual(Review.place_id, "")
         self.assertEqual(Review.user_id, "")

@@ -17,8 +17,6 @@ class TestCity(unittest.TestCase):
 
     def test_attributes(self):
         """ Tests city attributes """
-        City.state_id = None
-        City.name = None
 
-        self.assertEqual(City.state_id, None)
-        self.assertEqual(City.name, None)
+        self.assertEqual(City.state_id, "")
+        self.assertEqual(City.name, "")
