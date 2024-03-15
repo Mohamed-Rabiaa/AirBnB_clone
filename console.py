@@ -68,12 +68,11 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
             else:
                 cls_name = key.split('.')[0]
-                # Create an instance directly from the class name                                                                          
+                # Create an instance directly from the class name
                 cls = globals()[cls_name]
                 dct = storage.all()
                 obj = cls(**dct[key])
                 print(obj.__str__())
-
 
     def do_destroy(self, line):
         """Deletes an instance based on the class name
@@ -105,7 +104,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
         elif len(args) == 0:
-            for key,value in dct.items():
+            for key, value in dct.items():
                 cls_name = key.split('.')[0]
                 # Create an instance directly from the class name
                 cls = globals()[cls_name]
@@ -120,7 +119,7 @@ class HBNBCommand(cmd.Cmd):
                     obj = cls(**value)
                     output.append(obj.__str__())
 
-        if(len(output) > 0):
+        if (len(output) > 0):
             print(output)
 
     def do_update(self, line):
@@ -156,14 +155,12 @@ class HBNBCommand(cmd.Cmd):
         attr_name = args[2]
         attr_value = args[3]
 
-
         obj_dict[attr_name] = attr_value
-        # Create an instance directly from the class name                                                                           
+        # Create an instance directly from the class name
         cls = globals()[args[0]]
         obj = cls(**obj_dict)
-        
-        obj.save()
 
+        obj.save()
 
 
 if __name__ == '__main__':
